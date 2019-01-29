@@ -1,21 +1,25 @@
 function question1(){
-    var mass = parseFloat(document.getElementById("q1.mass").value);
-    var angle = parseFloat(document.getElementById("q1.angle").value);
+    var k = parseFloat(document.getElementById("q1.vk").value);
+    var w = parseFloat(document.getElementById("q1.vw").value);
+    var a = parseFloat(document.getElementById("q1.va").value);
+    var t = parseFloat(document.getElementById("q1.vt").value);
 
-    var accel = ((mass * 9.8)/Math.tan((90.0 - angle)*(Math.PI / 180)))/mass;
-
-    document.getElementById("q1.acceleration").innerHTML = accel.toString() + " m/s^2";
-    document.getElementById("q1.tension").innerHTML = ((parseFloat(mass) * 9.8)/Math.sin((90.0 - angle) * (Math.PI / 180))).toString() + " N";
+    document.getElementById("q1.a").innerHTML = (k/(w*w)) + " kg";
+    document.getElementById("q1.b").innerHTML = (0.5*k*(a*a)) + " J";
+    document.getElementById("q1.c").innerHTML = (-Math.acos(Math.sqrt(2/3))+0.8) + " s";
+    document.getElementById("q1.d").innerHTML = (-a*(w*w)*Math.cos(w*t-0.8)) + " m/s^2";
 }
 
 function question2(){
-    var mass1 = parseFloat(document.getElementById("q2.mass1").value);
-    var mass2 = parseFloat(document.getElementById("q2.mass2").value);
-    var angle = parseFloat(document.getElementById("q2.angle").value);
+    var passpoint = parseFloat(document.getElementById("q2.passpoint").value);
+    var x = parseFloat(document.getElementById("q2.x").value);
+    var cycle = parseFloat(document.getElementById("q2.cycle").value);
 
-    document.getElementById("q2.blockten").innerHTML = (mass1 * 9.8 * Math.sin(angle * (Math.PI / 180))).toString() + " N";
-    document.getElementById("q2.wallten").innerHTML = ((mass1 + mass2) * 9.8 * Math.sin(angle * (Math.PI / 180))).toString() + " N";
+    var a = (cycle/4 * 100);
+    var b = (2*Math.PI/(2/passpoint));
+    var c = (Math.pi-(Math.asin(x/(cycle/4))));
 
+    document.getElementById("q2.a").innerHTML = "x(t) = " + a + " sin( " + b + " t + " + c + " ) cm";
 }
 
 function question3(){
