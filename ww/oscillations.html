@@ -6,6 +6,15 @@
     <script type="text/javascript" src="../js/oscillations.js"></script>
     <link rel="icon" href="icon.jpg">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+            TeX: {
+                extensions: ["https://vcmisc.github.io/cwjp/js/forminput.js"]
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 <body>
     <h1 class="hh">Oscillations WebWork</h1>
@@ -36,42 +45,44 @@
         </div>
     </div>
 
-    <!---
     <div class="dd" name="q3">
         <h2 class="hh">Question 3</h2>
         <div class="dd2">
-            Angle 1 = <input type="text" id="q3.angle1"><br>
-            Angle 2 = <input type="text" id="q3.angle2"><br>
-            Mass = <input type="text" id="q3.mass"><br>
+            \(x = \FormInput{q3.v1} \sin(\FormInput{q3.v2} t - \FormInput{q3.v3}) m\).
+            <br>
+            \(( t > 0 )\)  at which \(x = \FormInput{q3.v4} m\)? 
+            <br>
+            Acceleration when \(x = \FormInput{q3.v5} m\)
+            <br>
             <button type="button" onclick="question3();">Calculate</button>
-            <p id="q3.tension"></p>
+            <p id="q3.a"></p>
+            <p id="q3.b"></p>
         </div>
     </div>
 
     <div class="dd" name="q4">
         <h2 class="hh">Question 4</h2>
         <div class="dd2">
-            Total Mass = <input type="text" id="q4.tmass"><br>
-            Down Accel = <input type="text" id="q4.daccel"><br>
-            Up Accel = <input type="text" id="q4.uaccel"><br>
+            Length = <input type="text" id="q4.v1"><br>
+            Angle = <input type="text" id="q4.v2"><br>
+            Mass = <input type="text" id="q4.v3"><br>
             <button type="button" onclick="question4();">Calculate</button>
-            <p id="q4.mass"></p>
+            <p id="q4.a"></p>
+            <p id="q4.b"></p>
+            <p id="q4.c"></p>
         </div>
     </div>
 
     <div class="dd" name="q5">
         <h2 class="hh">Question 5</h2>
         <div class="dd2">
-            Mass = <input type="text" id="q5.mass"><br>
-            Force F = <input type="text" id="q5.force"><br>
-            Angle = <input type="text" id="q5.angle"><br>
-            Time = <input type="text" id="q5.time"><br>
+            Period = <input type="text" id="q5.v1"><br>
             <button type="button" onclick="question5();">Calculate</button>
-            <p id="q5.speed"></p>
-            <p id="q5.magnitude"></p>
+            <p id="q5.a"></p>
+            <p id="q5.b"></p>
         </div>
     </div>
-
+       <!---
     <div class="dd" name="q6">
         <h2 class="hh">Question 6</h2>
         <div class="dd2">

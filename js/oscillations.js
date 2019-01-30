@@ -23,34 +23,33 @@ function question2(){
 }
 
 function question3(){
-    var angle2 = parseFloat(document.getElementById("q3.angle1").value) * (Math.PI / 180);
-    var angle1 = parseFloat(document.getElementById("q3.angle2").value) * (Math.PI / 180);
-    var mass = parseFloat(document.getElementById("q3.mass").value);
+    var a = parseFloat(document.getElementById("q3.v1").value) * (Math.PI / 180);
+    var w = parseFloat(document.getElementById("q3.v2").value) * (Math.PI / 180);
+    var phi = parseFloat(document.getElementById("q3.v3").value);
+    var x2 = parseFloat(document.getElementById("q3.v4").value);
+    var x1 = parseFloat(document.getElementById("q3.v5").value);
 
-    var t1 = (mass * 9.8)/(Math.sin(angle1) + (Math.cos(angle1)/Math.cos(angle2)) * Math.sin(angle2));
-
-    document.getElementById("q3.tension").innerHTML = ((t1 * Math.cos(angle1))/Math.cos(angle2)).toString() + " N";
+    document.getElementById("q3.a").innerHTML = ((Math.asin(x2/a) + phi)/w) + " s";
+    document.getElementById("q3.b").innerHTML = (-(w*w) * (x1)) + " m/s^2";
 }
 
 function question4(){
-    var tmass = parseFloat(document.getElementById("q4.tmass").value);
-    var daccel = parseFloat(document.getElementById("q4.daccel").value);
-    var uaccel = parseFloat(document.getElementById("q4.uaccel").value);
+    var l = parseFloat(document.getElementById("q4.v1").value);
+    var theta = parseInt(document.getElementById("q4.v2").value);
+    var mass = parseInt(document.getElementById("q4.v3").value);
 
-    var uplift = tmass * 9.8 - tmass * daccel;
-    var n = 9.8 + uaccel;
+    var ans2 = Math.sqrt((2*9.8*l*(1-Math.cos(theta / 360*2*Math.pi))));
 
-    document.getElementById("q4.mass").innerHTML = (-(uplift - tmass * n)/ (n)).toString() + " kg";
+    document.getElementById("q4.a").innerHTML = (2*Math.PI/(Math.sqrt(9.8/l))) + " s";
+    document.getElementById("q4.b").innerHTML = ans2 + " m/s";
+    document.getElementById("q4.c").innerHTML = (.5*mass/1000*ans2*ans2) + " J";
 }
 
 function question5(){
-    var mass = parseFloat(document.getElementById("q5.mass").value);
-    var force = parseFloat(document.getElementById("q5.force").value);
-    var angle = parseFloat(document.getElementById("q5.angle").value) * (Math.PI / 180);
-    var time = parseFloat(document.getElementById("q5.time").value);
+    var T = parseFloat(document.getElementById("q5.v1").value);
 
-    document.getElementById("q5.speed").innerHTML = (force * Math.cos(angle)/mass) * time + " m/s";
-    document.getElementById("q5.magnitude").innerHTML = mass * 9.8 - force * Math.sin(angle) + " N";
+    document.getElementById("q5.a").innerHTML = (T*T*9.81/(4*3.14*3.14)) + " m";
+    document.getElementById("q5.b").innerHTML = (T * (Math.sqrt(6))) + " s";
 }
 
 function question6(){
