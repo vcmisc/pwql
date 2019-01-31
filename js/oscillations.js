@@ -62,38 +62,48 @@ function question6(){
 }
 
 function question7(){
-    var mass1 = parseFloat(document.getElementById("q7.mass1").value);
-    var mass2 = parseFloat(document.getElementById("q7.mass2").value);
+    var m = parseFloat(document.getElementById("q7.v1").value);
+    var k = parseFloat(document.getElementById("q7.v2").value);
 
-    document.getElementById("q7.accel").innerHTML = (9.8 * mass1 * Math.sin(30 * (Math.PI / 180)) - 9.8 * mass2 * Math.sin(60 * (Math.PI / 180)))/(mass1 + mass2) + " m/s^2   <- Answer could be the negative/position version of this number.";
-    document.getElementById("q7.tension").innerHTML = 9.8 * mass1 * Math.sin(30 * (Math.PI / 180)) - mass1 * (9.8 * mass1 * Math.sin(30 * (Math.PI / 180)) - 9.8 * mass2 * Math.sin(60 * (Math.PI / 180)))/(mass1 + mass2) + " N";
+    document.getElementById("q7.a").innerHTML = (19.6*(m/1000)/k) + " m";
+    document.getElementById("q7.b").innerHTML = (Math.sqrt(Math.PI*((m/1000)/k))) + " s";
 }
 
 function question8(){
-    var mass1 = parseFloat(document.getElementById("q8.mass1").value);
-    var mass2 = parseFloat(document.getElementById("q8.mass2").value);
-    var force = parseFloat(document.getElementById("q8.force").value);
-    var ac = (force * Math.cos(20 * (Math.PI / 180)) - 9.8 * mass1 * Math.sin(30 * (Math.PI / 180)))/(mass1 + mass2);
-    document.getElementById("q8.accel").innerHTML = ac + " m/s^2  <- Answer could be the negative/position version of this number.";
-    document.getElementById("q8.tension").innerHTML = force * Math.cos(20 * (Math.PI / 180)) - 4.0 * ac + " N";
+    var m = parseFloat(document.getElementById("q8.v1").value)/1000;
+    var x = parseFloat(document.getElementById("q8.v2").value)/100;
+    var v = parseFloat(document.getElementById("q8.v3").value)/100;
+
+    var w = 3.14159 * v/x;
+
+    document.getElementById("q8.a").innerHTML = w + " s^-1";
+    document.getElementById("q8.b").innerHTML = w*w*x*m/2 + " N";
+    document.getElementById("q8.c").innerHTML = w*x/2 + " m/s";
 }
 
 function question9(){
-    var mass1 = parseFloat(document.getElementById("q9.mass1").value);
-    var mass2 = parseFloat(document.getElementById("q9.mass2").value);
-    var force = parseFloat(document.getElementById("q9.force").value);
+    var m = parseFloat(document.getElementById("q9.v1").value)/1000;
+    var k = parseFloat(document.getElementById("q9.v2").value);
+    var A = parseFloat(document.getElementById("q9.v3").value);
 
-    var ac = (9.8 * mass1 - force * Math.cos(18 * (Math.PI / 180)))/(mass1 + mass2);
-    document.getElementById("q9.accel").innerHTML = ac + " m/s^2  <- Answer could be the negative/position version of this number.";
-    document.getElementById("q9.tension").innerHTML = mass2 * ac + force * Math.cos(18 * (Math.PI / 180)) + " N";
+    var w = Math.sqrt(k/m);
+    var T = 2*Math.PI/w;
+    var t = Math.asin(Math.sqrt(2/3))/w;
+
+    document.getElementById("q9.a").innerHTML = (A*Math.sqrt(2/3)) + "m " + t + "s ";
+    document.getElementById("q9.b").innerHTML = (A*Math.sqrt(2/3)) + "m " + (T/2 - t) + "s ";
+    document.getElementById("q9.c").innerHTML = (-A*Math.sqrt(2/3)) + "m " + (T/2 + t) + "s ";
+    document.getElementById("q9.d").innerHTML = (-A*Math.sqrt(2/3)) + "m " + (T - t) + "s ";
+
 }
 
-function question9(){
-    var mass1 = parseFloat(document.getElementById("q10.mass1").value);
-    var mass2 = parseFloat(document.getElementById("q10.mass2").value);
-    var force = parseFloat(document.getElementById("q10.force").value);
+function question10(){
+    var f1 = parseFloat(document.getElementById("q10.v1").value);
+    var m2 = parseFloat(document.getElementById("q10.v2").value)/1000;
+    var f2 = parseFloat(document.getElementById("q10.v3").value);
 
-    var ac = (9.8 * mass1 - force * Math.cos(18 * (Math.PI / 180)))/(mass1 + mass2);
-    document.getElementById("q10.accel").innerHTML = ac + " m/s^2  <- Answer could be the negative/position version of this number.";
-    document.getElementById("q10.tension").innerHTML = mass2 * ac + force * Math.cos(18 * (Math.PI / 180)) + " N";
+    var m1 = f2*f2*m2/(f1*f1-$2*f2);
+
+    document.getElementById("q10.a").innerHTML = m1 + " kg";
+    document.getElementById("q10.b").innerHTML = (4*3.14*3.14*f1*f1*m1) + " N/m";
 }
