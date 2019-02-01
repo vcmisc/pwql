@@ -53,12 +53,20 @@ function question5(){
 }
 
 function question6(){
-    var force = parseFloat(document.getElementById("q6.force").value);
-    var angle = parseFloat(document.getElementById("q6.angle").value) * (Math.PI / 180);
+    var A = parseFloat(document.getElementById("q6.v1").value);
+    var T = parseFloat(document.getElementById("q6.v2").value);
 
-    document.getElementById("q6.mass").innerHTML = ((force/Math.sin(angle)) * Math.cos(angle)) / 9.8 + " kg";
-    document.getElementById("q6.tension").innerHTML = force/Math.sin(angle) + " N";
+    document.getElementById("q6.a").innerHTML = 
+    "First position: " + (Math.sqrt(3)*A/2) + " m         First time: " + T/12 + " s </br>" + 
+    "Second position: " + (-Math.sqrt(3)*A/2) + " m         Second time: " + 5*T/12 + " s </br>" + 
+    "Third position: " + (-Math.sqrt(3)*A/2) + " m         Third time: " + 7*T/12 + " s </br>" +
+    "Fourth position: " + (Math.sqrt(3)*A/2) + " m         Fourth time: " + 11*T/12 + " s </br>";
 
+    document.getElementById("q6.b").innerHTML =
+    "First position: " + (A/2) + " m         First time: " + T/6 + " s </br>" + 
+    "Second position: " + (-A/2) + " m         Second time: " + T/3 + " s </br>" + 
+    "Third position: " + (-A/2) + " m         Third time: " + 2*T/3 + " s </br>" +
+    "Fourth position: " + (A/2) + " m         Fourth time: " + 5*T/6 + " s </br>";
 }
 
 function question7(){
