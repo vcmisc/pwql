@@ -6,7 +6,7 @@ function question1(){
 
     document.getElementById("q1.a").innerHTML = (k/(w*w)) + " kg";
     document.getElementById("q1.b").innerHTML = (0.5*k*(a*a)) + " J";
-    document.getElementById("q1.c").innerHTML = (-Math.acos(Math.sqrt(2/3))+0.8) + " s";
+    document.getElementById("q1.c").innerHTML = ((-Math.acos(Math.sqrt(2/3))+0.8)/w) + " s";
     document.getElementById("q1.d").innerHTML = (-a*(w*w)*Math.cos(w*t-0.8)) + " m/s^2";
 }
 
@@ -17,14 +17,14 @@ function question2(){
 
     var a = (cycle/4 * 100);
     var b = (2*Math.PI/(2/passpoint));
-    var c = (Math.pi-(Math.asin(x/(cycle/4))));
+    var c = (Math.PI-(Math.asin(x/(cycle/4))));
 
     document.getElementById("q2.a").innerHTML = "x(t) = " + a + " sin( " + b + " t + " + c + " ) cm";
 }
 
 function question3(){
-    var a = parseFloat(document.getElementById("q3.v1").value) * (Math.PI / 180);
-    var w = parseFloat(document.getElementById("q3.v2").value) * (Math.PI / 180);
+    var a = parseFloat(document.getElementById("q3.v1").value);
+    var w = parseFloat(document.getElementById("q3.v2").value);
     var phi = parseFloat(document.getElementById("q3.v3").value);
     var x2 = parseFloat(document.getElementById("q3.v4").value);
     var x1 = parseFloat(document.getElementById("q3.v5").value);
@@ -38,7 +38,7 @@ function question4(){
     var theta = parseInt(document.getElementById("q4.v2").value);
     var mass = parseInt(document.getElementById("q4.v3").value);
 
-    var ans2 = Math.sqrt((2*9.8*l*(1-Math.cos(theta / 360*2*Math.pi))));
+    var ans2 = Math.sqrt((2*9.8*l*(1-Math.cos(theta / 360*2*Math.PI))));
 
     document.getElementById("q4.a").innerHTML = (2*Math.PI/(Math.sqrt(9.8/l))) + " s";
     document.getElementById("q4.b").innerHTML = ans2 + " m/s";
@@ -70,11 +70,11 @@ function question6(){
 }
 
 function question7(){
-    var m = parseFloat(document.getElementById("q7.v1").value);
+    var m = parseFloat(document.getElementById("q7.v1").value)/1000;
     var k = parseFloat(document.getElementById("q7.v2").value);
 
-    document.getElementById("q7.a").innerHTML = (19.6*(m/1000)/k) + " m";
-    document.getElementById("q7.b").innerHTML = (Math.sqrt(Math.PI*((m/1000)/k))) + " s";
+    document.getElementById("q7.a").innerHTML = (19.6*(m)/k) + " m";
+    document.getElementById("q7.b").innerHTML = (Math.PI*Math.sqrt(m/k)) + " s";
 }
 
 function question8(){
@@ -98,10 +98,12 @@ function question9(){
     var T = 2*Math.PI/w;
     var t = Math.asin(Math.sqrt(2/3))/w;
 
-    document.getElementById("q9.a").innerHTML = (A*Math.sqrt(2/3)) + "m " + t + "s ";
-    document.getElementById("q9.b").innerHTML = (A*Math.sqrt(2/3)) + "m " + (T/2 - t) + "s ";
-    document.getElementById("q9.c").innerHTML = (-A*Math.sqrt(2/3)) + "m " + (T/2 + t) + "s ";
-    document.getElementById("q9.d").innerHTML = (-A*Math.sqrt(2/3)) + "m " + (T - t) + "s ";
+    var ans = A*Math.sin(w*t)/100
+    
+    document.getElementById("q9.a").innerHTML = ans + "m " + t + "s ";
+    document.getElementById("q9.b").innerHTML = ans + "m " + (T/2 - t) + "s ";
+    document.getElementById("q9.c").innerHTML = (-ans) + "m " + (T/2 + t) + "s ";
+    document.getElementById("q9.d").innerHTML = (-ans) + "m " + (T - t) + "s ";
 
 }
 
@@ -110,7 +112,7 @@ function question10(){
     var m2 = parseFloat(document.getElementById("q10.v2").value)/1000;
     var f2 = parseFloat(document.getElementById("q10.v3").value);
 
-    var m1 = f2*f2*m2/(f1*f1-$2*f2);
+    var m1 = f2*f2*m2/(f1*f1-f2*f2);
 
     document.getElementById("q10.a").innerHTML = m1 + " kg";
     document.getElementById("q10.b").innerHTML = (4*3.14*3.14*f1*f1*m1) + " N/m";

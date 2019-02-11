@@ -3,7 +3,7 @@
 <head>
     <title>Angoni Kreshnik Physics</title>
     <link rel="stylesheet" href="../other/ww.css">
-    <script type="text/javascript" src="../js/oscillations.js"></script>
+    <script type="text/javascript" src="../js/mw2.js"></script>
     <link rel="icon" href="icon.jpg">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <script type="text/x-mathjax-config">
@@ -22,24 +22,26 @@
     <div class="dd" name="q1">
         <h2 class="hh">Question 1</h2>
         <div class="dd2">
-            k Spring Constant = <input type="text" id="q1.vk"><br>
-            Amplitude = <input type="text" id="q1.va"><br>
-            ω Omega = <input type="text" id="q1.vw"><br>
-            Time = <input type="text" id="q1.vt"><br>
+            \(y(x,t) = \FormInput{q1.v1} \cos(\FormInput{q1.v2} x - \FormInput{q1.v3} t + 0.1)\)
+            <br>
+            \(x\) = <input type="text" id="q1.v4"><br>
+            \(t\) = <input type="text" id="q1.v5"><br>
             <button type="button" onclick="question1();">Calculate</button>
             <p id="q1.a"></p>
             <p id="q1.b"></p>
             <p id="q1.c"></p>
             <p id="q1.d"></p>
+            <p id="q1.e"></p>
         </div>
     </div>
 
     <div class="dd" name="q2">
         <h2 class="hh">Question 2</h2>
         <div class="dd2">
-            # of Times per seconds = <input type="text" id="q2.passpoint"><br>
-            x when velocity is negative = <input type="text" id="q2.x"><br>
-            Travels = <input type="text" id="q2.cycle"><br>
+            Wavelength = <input type="text" id="q2.v1"><br>
+            Period = <input type="text" id="q2.v2"><br>
+            Amplitude = <input type="text" id="q2.v3"><br>
+            y = <input type="text" id="q2.v4"><br>
             <button type="button" onclick="question2();">Calculate</button>
             <p id="q2.a"></p>
         </div>
@@ -48,12 +50,8 @@
     <div class="dd" name="q3">
         <h2 class="hh">Question 3</h2>
         <div class="dd2">
-            \(x = \FormInput{q3.v1} \sin(\FormInput{q3.v2} t - \FormInput{q3.v3}) m\).
-            <br>
-            \(( t > 0 )\)  at which \(x = \FormInput{q3.v4} m\)? 
-            <br>
-            Acceleration when \(x = \FormInput{q3.v5} m\)
-            <br>
+            Tension = <input type="text" id="q3.v1"><br>
+            \(y(x,t) = \FormInput{q3.v2} \sin(\FormInput{q3.v3} x - \FormInput{q3.v4} t)\) m <br>
             <button type="button" onclick="question3();">Calculate</button>
             <p id="q3.a"></p>
             <p id="q3.b"></p>
@@ -63,43 +61,49 @@
     <div class="dd" name="q4">
         <h2 class="hh">Question 4</h2>
         <div class="dd2">
-            Length = <input type="text" id="q4.v1"><br>
-            Angle = <input type="text" id="q4.v2"><br>
-            Mass = <input type="text" id="q4.v3"><br>
+            Frequency = <input type="text" id="q4.v1"><br>
+            Velocity = <input type="text" id="q4.v2"><br>
+            Phase rad = <input type="text" id="q4.v3"><br>
+            Interval (ms) = <input type="text" id="q4.v4"><br>
             <button type="button" onclick="question4();">Calculate</button>
             <p id="q4.a"></p>
             <p id="q4.b"></p>
-            <p id="q4.c"></p>
         </div>
     </div>
 
     <div class="dd" name="q5">
         <h2 class="hh">Question 5</h2>
         <div class="dd2">
-            Period = <input type="text" id="q5.v1"><br>
+            \(y = \FormInput{q5.v1} \sin(\FormInput{q5.v2} x \pm \FormInput{q5.v3} t)\) m <br>
+            x = <input type="text" id="q5.v4"><br>
             <button type="button" onclick="question5();">Calculate</button>
             <p id="q5.a"></p>
             <p id="q5.b"></p>
+            <p id="q5.c"></p>
         </div>
     </div>
 
     <div class="dd" name="q6">
         <h2 class="hh">Question 6</h2>
         <div class="dd2">
-            X = <input type="text" id="q6.v1"><br>
-            Period = <input type="text" id="q6.v2"><br>
+            Velocity = <input type="text" id="q6.v1"><br>
+            Amplitude = <input type="text" id="q6.v2"><br>
+            Frequency = <input type="text" id="q6.v4"><br>
+            \(x\) = <input type="text" id="q6.v4"><br>
             <button type="button" onclick="question6();">Calculate</button>
             <p id="q6.a"></p>
-            <p>-------------------------------------</p>
             <p id="q6.b"></p>
+            <p id="q6.c"></p>
         </div>
     </div>
 
     <div class="dd" name="q7">
         <h2 class="hh">Question 7</h2>
         <div class="dd2">
-            Mass = <input type="text" id="q7.v1"><br>
-            Spring Constant = <input type="text" id="q7.v2"><br>
+            Frequency = <input type="text" id="q7.v1"><br>
+            Density = <input type="text" id="q7.v2"><br>
+            Mass = <input type="text" id="q7.v3"><br>
+            "n" harmonic = <input type="text" id="q7.v4"><br>
             <button type="button" onclick="question7();">Calculate</button>
             <p id="q7.a"></p>
             <p id="q7.b"></p>
@@ -109,40 +113,38 @@
     <div class="dd" name="q8">
         <h2 class="hh">Question 8</h2>
         <div class="dd2">
-            Mass = <input type="text" id="q8.v1"><br>
-            Travels = <input type="text" id="q8.v2"><br>
-            Average Speed = <input type="text" id="q8.v3"><br>
+            Length = <input type="text" id="q8.v1"><br>
+            Max Displacement = <input type="text" id="q8.v3"><br>
+            Speed = <input type="text" id="q8.v4"><br>
             <button type="button" onclick="question8();">Calculate</button>
             <p id="q8.a"></p>
             <p id="q8.b"></p>
             <p id="q8.c"></p>
+            <p id="q8.d"></p>
         </div>
     </div>
     
     <div class="dd" name="q9">
         <h2 class="hh">Question 9</h2>
         <div class="dd2">
-            Mass = <input type="text" id="q9.v1"><br>
-            Spring Constant = <input type="text" id="q9.v2"><br>
-            A = <input type="text" id="q9.v3"><br>
+            Frequency 1 = <input type="text" id="q9.v1"><br>
+            Tension = <input type="text" id="q9.v2"><br>
+            Frequency 2 = <input type="text" id="q9.v3"><br>
             <button type="button" onclick="question9();">Calculate</button>
             <p id="q9.a"></p>
-            <p id="q9.b"></p>
-            <p id="q9.c"></p>
-            <p id="q9.d"></p>
         </div>
     </div>
 
     <div class="dd" name="q9">
-            <h2 class="hh">Question 10</h2>
-            <div class="dd2">
-                Frequency = <input type="text" id="q10.v1"><br>
-                Mass Added = <input type="text" id="q10.v2"><br>
-                Frequency 2 = <input type="text" id="q10.v3"><br>
-                <button type="button" onclick="question10();">Calculate</button>
-                <p id="q10.a"></p>
-                <p id="q10.b"></p>
-            </div>
+        <h2 class="hh">Question 10</h2>
+        <div class="dd2">
+            \( "n" \times 10^{-4}\) = <input type="text" id="q10.v1"><br>
+            Mass per unit length = <input type="text" id="q10.v2"><br>
+            Wavelength = <input type="text" id="q10.v3"><br>
+            <button type="button" onclick="question10();">Calculate</button>
+            <p id="q10.a"></p>
+            <p id="q10.b"></p>
         </div>
-    -->
+    </div>
 </body>
+
