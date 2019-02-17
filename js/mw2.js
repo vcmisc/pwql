@@ -103,7 +103,7 @@ function question9(){
 
 function question10(){
     var T = parseFloat(document.getElementById("q10.v1").value);
-    var mu = parseFloat(document.getElementById("q10.v2").value)/1000;
+    var mu = parseFloat(document.getElementById("q10.v2").value);
     var lambda = parseFloat(document.getElementById("q10.v3").value);
 
     document.getElementById("q10.a").innerHTML = (Math.sqrt(T/(mu/100000))) + " m/s";
