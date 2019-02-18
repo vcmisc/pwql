@@ -39,7 +39,7 @@ function question4(){
     var dt = parseFloat(document.getElementById("q4.v3").value);
 
     document.getElementById("q4.a").innerHTML = ((phase*v)/(2*Math.PI*f)) + " m";
-    document.getElementById("q4.b").innerHTML = ((dt*f*2*Math.PI)/1000) + " rad";
+    document.getElementById("q4.b").innerHTML = ((dt*f*2*Math.PI)/100) + " rad";
 }
 
 function question5(){
