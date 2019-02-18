@@ -48,7 +48,7 @@ function question5(){
     var w = parseFloat(document.getElementById("q5.v3").value);
     var x = parseFloat(document.getElementById("q5.v4").value);
     
-    document.getElementById("q5.a").innerHTML = "\\(y(x,t) = " + (A*2) + " cos( " + (w) + " t)sin( " + (k) + " x)\\)";
+    document.getElementById("q5.a").innerHTML = "\\(y(x,t) = " + (a*2) + " cos( " + (w) + " t)sin( " + (k) + " x)\\)";
     MathJax.Hub.Queue(["Typeset",MathJax.Hub,"q5.a"]);
 
     document.getElementById("q5.b").innerHTML = (Math.abs(2*a*Math.sin(k*x))) + " m";
