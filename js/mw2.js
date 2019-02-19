@@ -36,8 +36,8 @@ function question4(){
     var f = parseFloat(document.getElementById("q4.v1").value);
     var v = parseFloat(document.getElementById("q4.v2").value);
     var phase = parseFloat(document.getElementById("q4.v3").value);
-    var dt = parseFloat(document.getElementById("q4.v3").value);
-
+    var dt = parseFloat(document.getElementById("q4.v4").value);
+    
     document.getElementById("q4.a").innerHTML = ((phase*v)/(2*Math.PI*f)) + " m";
     document.getElementById("q4.b").innerHTML = ((2*Math.PI*((dt/1000)*v))/(v/f)) + " rad";
 }
