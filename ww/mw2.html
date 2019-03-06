@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134540918-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-134540918-1');
+    </script>
+
     <title>Angoni Kreshnik Physics</title>
     <link rel="stylesheet" href="../other/ww.css">
     <script type="text/javascript" src="../js/mw2.js"></script>
@@ -17,7 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 <body>
-    <h1 class="hh">Oscillations WebWork</h1>
+    <h1 class="hh">Mechanical Waves WebWork</h1>
 
     <div class="dd" name="q1">
         <h2 class="hh">Question 1</h2>
@@ -88,7 +98,7 @@
         <div class="dd2">
             Velocity = <input type="text" id="q6.v1"><br>
             Amplitude = <input type="text" id="q6.v2"><br>
-            Frequency = <input type="text" id="q6.v4"><br>
+            Frequency = <input type="text" id="q6.v3"><br>
             \(x\) = <input type="text" id="q6.v4"><br>
             <button type="button" onclick="question6();">Calculate</button>
             <p id="q6.a"></p>
@@ -114,6 +124,7 @@
         <h2 class="hh">Question 8</h2>
         <div class="dd2">
             Length = <input type="text" id="q8.v1"><br>
+            Mass = <input type="text" id="q8.v2"><br>
             Max Displacement = <input type="text" id="q8.v3"><br>
             Speed = <input type="text" id="q8.v4"><br>
             <button type="button" onclick="question8();">Calculate</button>

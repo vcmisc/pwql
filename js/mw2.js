@@ -36,10 +36,10 @@ function question4(){
     var f = parseFloat(document.getElementById("q4.v1").value);
     var v = parseFloat(document.getElementById("q4.v2").value);
     var phase = parseFloat(document.getElementById("q4.v3").value);
-    var dt = parseFloat(document.getElementById("q4.v3").value);
-
+    var dt = parseFloat(document.getElementById("q4.v4").value);
+    
     document.getElementById("q4.a").innerHTML = ((phase*v)/(2*Math.PI*f)) + " m";
-    document.getElementById("q4.b").innerHTML = ((dt*f*2*Math.PI)/1000) + " rad";
+    document.getElementById("q4.b").innerHTML = ((2*Math.PI*((dt/1000)*v))/(v/f)) + " rad";
 }
 
 function question5(){
@@ -48,7 +48,7 @@ function question5(){
     var w = parseFloat(document.getElementById("q5.v3").value);
     var x = parseFloat(document.getElementById("q5.v4").value);
     
-    document.getElementById("q5.a").innerHTML = "\\(y(x,t) = " + (A*2) + " cos( " + (w) + " t)sin( " + (k) + " x)\\)";
+    document.getElementById("q5.a").innerHTML = "\\(y(x,t) = " + (a*2) + " cos( " + (w) + " t)sin( " + (k) + " x)\\)";
     MathJax.Hub.Queue(["Typeset",MathJax.Hub,"q5.a"]);
 
     document.getElementById("q5.b").innerHTML = (Math.abs(2*a*Math.sin(k*x))) + " m";
@@ -103,7 +103,7 @@ function question9(){
 
 function question10(){
     var T = parseFloat(document.getElementById("q10.v1").value);
-    var mu = parseFloat(document.getElementById("q10.v2").value)/1000;
+    var mu = parseFloat(document.getElementById("q10.v2").value);
     var lambda = parseFloat(document.getElementById("q10.v3").value);
 
     document.getElementById("q10.a").innerHTML = (Math.sqrt(T/(mu/100000))) + " m/s";
