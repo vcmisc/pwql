@@ -68,7 +68,7 @@ function question8(){
 
     document.getElementById("q8.a").innerHTML = f1 + " Hz    " + (340/f1) + " m";
     document.getElementById("q8.b").innerHTML = f2 + " Hz    " + ((340+v1)/f2) + " m";
-    document.getElementById("q8.c").innerHTML = f3 + " Hz    " + ((340+v2)/f3) + " m";
+    document.getElementById("q8.c").innerHTML = f3 + " Hz    " + ((340+v3)/f3) + " m";
 }
 
 function question9(){
