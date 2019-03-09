@@ -14,7 +14,7 @@ function question2(){
     var ans1 = (343*(1.0 - f1 / f2));
 
     document.getElementById("q2.a").innerHTML = ans1 + " m/s";
-    document.getElementById("q2.b").innerHTML = (343 / (343 + ans1) * f) + " Hz";
+    document.getElementById("q2.b").innerHTML = (343 / (343 + ans1) * f1) + " Hz";
 }
 
 function question3(){
