@@ -28,8 +28,8 @@ function question2(){
 
 function question3(){
     var d1 = parseFloat(document.getElementById("q3.v1").value);
-    var d2 = parseInt(document.getElementById("q3.v2").value);
-    var vs = parseInt(document.getElementById("q3.v3").value);
+    var d2 = parseFloat(document.getElementById("q3.v2").value);
+    var vs = parseFloat(document.getElementById("q3.v3").value);
 
     document.getElementById("q3.a").innerHTML = vs/(Math.sqrt((d1*d1)+(d2*d2))-d2) + " Hz";
     document.getElementById("q3.b").innerHTML = (vs/(2*(Math.sqrt((d1*d1)+(d2*d2))-d2))) + " Hz";
