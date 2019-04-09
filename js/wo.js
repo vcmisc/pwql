@@ -74,15 +74,14 @@ function question7(){
 }
 
 function question8(){
-    var fo = parseFloat(document.getElementById("q8.v1").value);
-    var v1 = parseFloat(document.getElementById("q8.v2").value);
-    var v3 = parseFloat(document.getElementById("q8.v3").value);
+    var t = parseFloat(document.getElementById("q8.v1").value);
 
-    var f1 = ((340)/(340-v1))*fo;
-    var f2 = ((340+v1)/(340))*fo;
-    var f3 = ((340+v3)/(340-v3))*fo;
-
-    document.getElementById("q8.a").innerHTML = f1 + " Hz    " + (340/f1) + " m";
-    document.getElementById("q8.b").innerHTML = f2 + " Hz    " + ((340+v1)/f2) + " m";
-    document.getElementById("q8.c").innerHTML = f3 + " Hz    " + ((340+v3)/f3) + " m";
+    document.getElementById("q8.a").innerHTML = 1000*(2.8*t)/(6) + " nm";
+    document.getElementById("q8.b").innerHTML = 1000*(2.8*t)/(7) + " nm";
+    document.getElementById("q8.c").innerHTML = 1000*(2.8*t)/(8) + " nm";
+    document.getElementById("q8.d").innerHTML = 1000*(2.8*t)/(9) + " nm";
+    document.getElementById("q8.e").innerHTML = 1000*(2.8*t)/(6.5) + " nm";
+    document.getElementById("q8.f").innerHTML = 1000*(2.8*t)/(7.5) + " nm";
+    document.getElementById("q8.g").innerHTML = 1000*(2.8*t)/(8.5) + " nm";
+    document.getElementById("q8.h").innerHTML = 1000*(2.8*t)/(9.5) + " nm";
 }
