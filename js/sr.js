@@ -55,10 +55,10 @@ function question6(){
     var g = t/to;
     var speed = Math.sqrt(1-1/(g*g))*(3*Math.pow(10,8));
 
-    //var ke = mp*((9.11e-31))*Math.pow(3e8,2)*(g-1);
+    var ke = mp*((9.11e-31))*Math.pow(3e8,2)*(g-1);
 
-    var ke = 195*g*(9.11e-31)*(3e8)*(3e8)-195*(9.11e-31)*(3e8)*(3e8);
+    //var ke = 195*g*(9.11e-31)*(3e8)*(3e8)-195*(9.11e-31)*(3e8)*(3e8);
 
     document.getElementById("q6.a").innerHTML = speed + " m/s";
-    //document.getElementById("q6.b").innerHTML = (ke/(1.6e-19))/1000000 + " MeV";
+    document.getElementById("q6.b").innerHTML = (ke/(1.6e-19))/1000000 + " MeV (Take this answer and subtract 1 or 2 or more.)";
 }
