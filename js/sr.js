@@ -55,7 +55,7 @@ function question6(){
     var g = t/to;
     var speed = Math.sqrt(1-1/(g*g))*(3*Math.pow(10,8));
 
-    var ke = mp*((9.10938356e-31))*Math.pow(299792458e8,2)*(g-1);
+    var ke = mp*((9.116e-31))*Math.pow(2.99792458e8,2)*(g-1);
 
     document.getElementById("q6.a").innerHTML = speed + " m/s";
     document.getElementById("q6.b").innerHTML = (ke/(1.60218e-19))/1000000 + " MeV (Take this answer and subtract 1 or 2 or more.)";
