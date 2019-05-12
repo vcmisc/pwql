@@ -17,7 +17,7 @@ function question3(){
     var times = parseFloat(document.getElementById("q3.v1").value);
 
     document.getElementById("q3.a").innerHTML = "((" + times + "*(0.51E6)/(6.24E18))/(6.63E-34))/1E6 MHz";
-    document.getElementById("q3.b").innerHTML = "0 kgm/s";
+    document.getElementById("q3.b").innerHTML = "("+times+"*0.51E6*1.6E-19)/(3E8)^2*3E8 kgm/s";
 }
 
 function question4(){
