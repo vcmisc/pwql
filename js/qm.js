@@ -2,7 +2,7 @@ function question1(){
     var kw = parseFloat(document.getElementById("q1.v1").value);
     var mhz = parseFloat(document.getElementById("q1.v2").value);
 
-    document.getElementById("q1.a").innerHTML = "("+kw"*1E3/"+mhz+"*1E6)/(6.63E-34) photons/second";
+    document.getElementById("q1.a").innerHTML = "("+kw+"*1E3/"+mhz+"*1E6)/(6.63E-34) photons/second";
 }
 
 function question2(){
