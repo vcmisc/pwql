@@ -8,7 +8,7 @@ function question1(){
 function question2(){
     var f = parseFloat(document.getElementById("q2.v1").value);
 
-    document.getElementById("q2.a").innerHTML = ((3E8)/(f*10^6)) +" m";
+    document.getElementById("q2.a").innerHTML = "(3E8/"+f+"*1E6)) m";
     document.getElementById("q2.b").innerHTML = "(6.63E-34)*("+ f + "E6) Joules";
     document.getElementById("q2.c").innerHTML = "(6.63E-34)*("+ f + "E6)*(6.242E18) eV";
 }
