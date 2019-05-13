@@ -1,14 +1,14 @@
 function question1(){
     var kw = parseFloat(document.getElementById("q1.v1").value);
     var mhz = parseFloat(document.getElementById("q1.v2").value);
-
-    document.getElementById("q1.a").innerHTML = "("+kw+"*1E3/"+mhz+"*1E6)/(6.63E-34) photons/second";
+(100E3)/(150E6)/(6.63E-34)
+    document.getElementById("q1.a").innerHTML = "("+kw+"E3/"+mhz+"E6)/(6.63E-34) photons/second";
 }
 
 function question2(){
     var f = parseFloat(document.getElementById("q2.v1").value);
 
-    document.getElementById("q2.a").innerHTML = "(3E8/"+f+"*1E6)) m";
+    document.getElementById("q2.a").innerHTML = "(3E8/"+f+"E6)) m";
     document.getElementById("q2.b").innerHTML = "(6.63E-34)*("+ f + "E6) Joules";
     document.getElementById("q2.c").innerHTML = "(6.63E-34)*("+ f + "E6)*(6.242E18) eV";
 }
