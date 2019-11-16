@@ -116,15 +116,16 @@ function question15(){
     var clen = parseFloat(document.getElementById("q15.v3").value)/100;
     var angle = parseFloat(document.getElementById("q15.v4").value);
     var magfield = parseFloat(document.getElementById("q15.v5").value);
+    var current = parseFloat(document.getElementById("q15.v6").value);
 
 
-    document.getElementById("q15.a").innerHTML = "F1 = 0i + 0j " + alen*magfield*7*turns*Math.sin(angle* Math.PI / 180) + "k N";
-    document.getElementById("q15.b").innerHTML = "F2 = 0i " + -1*clen*magfield*7*turns + "j + 0k N";
-    document.getElementById("q15.c").innerHTML = "F3 = 0i + 0j " + -1*alen*magfield*7*turns*Math.sin(angle* Math.PI / 180) + "k N";
-    document.getElementById("q15.d").innerHTML = "F4 = 0i " + clen*magfield*7*turns + "j + 0k N";
+    document.getElementById("q15.a").innerHTML = "F1 = 0i + 0j " + alen*magfield*current*turns*Math.sin(angle* Math.PI / 180) + "k N";
+    document.getElementById("q15.b").innerHTML = "F2 = 0i " + -1*clen*magfield*current*turns + "j + 0k N";
+    document.getElementById("q15.c").innerHTML = "F3 = 0i + 0j " + -1*alen*magfield*current*turns*Math.sin(angle* Math.PI / 180) + "k N";
+    document.getElementById("q15.d").innerHTML = "F4 = 0i " + clen*magfield*current*turns + "j + 0k N";
 
 
-    document.getElementById("q15.e").innerHTML = "M = " + clen*alen*7*turns*Math.sin(angle* Math.PI / 180) + "i + " + clen*alen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "j + 0k A * m^2";
-    document.getElementById("q15.f").innerHTML = "M = 0i + 0j + " + magfield*alen*clen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "k Nm";
+    document.getElementById("q15.e").innerHTML = "M = " + clen*alen*current*turns*Math.sin(angle* Math.PI / 180) + "i + " + clen*alen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "j + 0k A * m^2";
+    document.getElementById("q15.f").innerHTML = "M = 0i + 0j + " + magfield*alen*clen*current*turns*Math.sin((90-angle)* Math.PI / 180) + "k Nm";
 
 }
