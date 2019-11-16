@@ -125,7 +125,7 @@ function question15(){
     document.getElementById("q15.d").innerHTML = "F4 = 0i " + clen*magfield*current*turns + "j + 0k N";
 
 
-    document.getElementById("q15.e").innerHTML = "M = " + clen*alen*current*turns*Math.sin(angle* Math.PI / 180) + "i + " + clen*alen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "j + 0k A * m^2";
+    document.getElementById("q15.e").innerHTML = "M = " + clen*alen*current*turns*Math.sin(angle* Math.PI / 180) + "i + " + -1*clen*alen*current*turns*Math.sin((90-angle)* Math.PI / 180) + "j + 0k A * m^2";
     document.getElementById("q15.f").innerHTML = "M = 0i + 0j + " + magfield*alen*clen*current*turns*Math.sin((90-angle)* Math.PI / 180) + "k Nm";
 
 }
