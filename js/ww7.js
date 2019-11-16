@@ -109,3 +109,22 @@ function question10(){
     document.getElementById("q10.a").innerHTML = (Math.sqrt(T/(mu/100000))) + " m/s";
     document.getElementById("q10.b").innerHTML = (mu/T*Math.pow(lambda/2/Math.PI, 2)*9.8/100) + " mm";
 }
+
+function question15(){
+    var turns = parseFloat(document.getElementById("q15.v1").value);
+    var alen = parseFloat(document.getElementById("q15.v2").value)/100;
+    var clen = parseFloat(document.getElementById("q15.v3").value)/100;
+    var angle = parseFloat(document.getElementById("q15.v4").value);
+    var magfield = parseFloat(document.getElementById("q15.v5").value);
+
+
+    document.getElementById("q15.a").innerHTML = "F1 = 0i + 0j " + alen*magfield*7*turns*Math.sin(angle* Math.PI / 180) + "k N";
+    document.getElementById("q15.b").innerHTML = "F2 = 0i " + -1*clen*magfield*7*turns + "j + 0k N";
+    document.getElementById("q15.c").innerHTML = "F3 = 0i + 0j " + -1*alen*magfield*7*turns*Math.sin(angle* Math.PI / 180) + "k N";
+    document.getElementById("q15.d").innerHTML = "F4 = 0i " + clen*magfield*7*turns + "j + 0k N";
+
+
+    document.getElementById("q15.d").innerHTML = "M = " + clen*alen*7*turns*Math.sin(angle* Math.PI / 180) + "i + " + clen*alen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "j + 0k A * m^2";
+    document.getElementById("q15.d").innerHTML = "M = 0i + 0j + " + magfield*alen*clen*7*turns*Math.sin((90-angle)* Math.PI / 180) + "k Nm";
+
+}
